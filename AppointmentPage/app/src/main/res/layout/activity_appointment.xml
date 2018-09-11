@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ViewMatch">
+
+    <ProgressBar
+        android:id="@+id/app_progress"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"/>
+
+    <LinearLayout
+        android:id="@+id/app_placeholder_cont"
+        style="@style/ViewWrap"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/app_placeholder_text"
+            style="@style/ViewWrap"
+            android:text="@string/error_api"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/text"/>
+
+        <Button
+            android:id="@+id/app_retry"
+            style="@style/ViewWrap"
+            android:text="@string/retry_text"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/text"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app_main_cont"
+        style="@style/ViewMatch"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/app_month"
+            style="@style/ViewMatchWidth"
+            android:textColor="@color/text"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold"
+            android:minHeight="?attr/actionBarSize"
+            android:gravity="center"
+            android:background="@color/white"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/app_tabs"
+            style="@style/ViewMatchWidth"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:tabMode="scrollable"
+            app:tabGravity="fill"
+            app:tabTextColor="@color/text"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabMinWidth="100dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/app_view_pager"
+            style="@style/ViewMatch"/>
+
+    </LinearLayout>
+
+</FrameLayout>

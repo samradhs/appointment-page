@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/daytime_root"
+    style="@style/ViewMatchWidth"
+    android:padding="@dimen/margin_large"
+    android:background="@color/light_grey">
+
+    <FrameLayout
+        android:id="@+id/icon_cont"
+        android:layout_width="@dimen/icon_bg_size"
+        android:layout_height="@dimen/icon_bg_size"
+        android:background="@drawable/bg_icon">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:src="@drawable/ic_morningsnack"
+            android:contentDescription="@string/daytime_hint"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/daytime_arrow_ic"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_red_reveallist"
+        android:contentDescription="@null"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/daytime_slots_avail"
+        style="@style/ViewWrap"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/daytime_arrow_ic"
+        android:layout_marginEnd="@dimen/margin_large"/>
+
+    <TextView
+        android:id="@+id/daytime_text"
+        style="@style/ViewWrap"
+        android:textColor="@color/text"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/daytime_slots_avail"
+        android:layout_toEndOf="@id/icon_cont"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">AppointmentPage</string>
+    <string name="toolbar_text">Choose a date and time</string>
+    <string name="daytime_hint">Daytime Icon</string>
+    <string name="slot_avail_text">%1$d slots available</string>
+    <string name="no_slots">No slots available to show</string>
+    <string name="error_api">Something went wrong</string>
+    <string name="retry_text">Retry</string>
+    <string name="no_internet">Please turn on Internet Connection</string>
+
+    <string-array name="month_names">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+</resources>
